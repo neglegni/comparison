@@ -3,14 +3,24 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AuswahlComponent } from './auswahl/auswahl.component';
+import { AuswertungComponent } from './auswertung/auswertung.component';
+import { ProdukteComponent } from './auswahl/produkte/produkte.component';
+import { AusgewaehlteProdukteComponent } from './auswertung/ausgewaehlte-produkte/ausgewaehlte-produkte.component';
+import { TabelleEigenschaftenComponent } from './auswertung/tabelle-eigenschaften/tabelle-eigenschaften.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AuswahlComponent,
+    AuswertungComponent,
+    ProdukteComponent,
+    AusgewaehlteProdukteComponent,
+    TabelleEigenschaftenComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
