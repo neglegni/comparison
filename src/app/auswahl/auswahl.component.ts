@@ -18,7 +18,6 @@ export class AuswahlComponent implements OnInit {
   selectedItems = [];
 
   select(product) {
-    window.alert('Das Produkt wurde für den Vergleich ausgewählt');
     this.auswahlService.addToAuswahl(product);
   }
 
