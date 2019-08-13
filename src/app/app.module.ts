@@ -5,18 +5,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuswahlComponent } from './auswahl/auswahl.component';
 import { AuswertungComponent } from './auswertung/auswertung.component';
-import { ProdukteComponent } from './auswahl/produkte/produkte.component';
-import { AusgewaehlteProdukteComponent } from './auswertung/ausgewaehlte-produkte/ausgewaehlte-produkte.component';
 import { TabelleEigenschaftenComponent } from './auswertung/tabelle-eigenschaften/tabelle-eigenschaften.component';
+import { TopBarComponent } from './top-bar/top-bar.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     AuswahlComponent,
     AuswertungComponent,
-    ProdukteComponent,
-    AusgewaehlteProdukteComponent,
     TabelleEigenschaftenComponent,
+    TopBarComponent,
   ],
   imports: [
     BrowserModule,

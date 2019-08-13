@@ -1,1 +1,18 @@
-<p>auswahl works!</p>
+<h3>Produktauswahl</h3>
+<div *ngFor="let product of products">
+
+    <h4>
+        <a [title]="product.name + 'details'">
+            {{ product.name }}
+        </a>
+    </h4>
+
+    <p *ngIf="product.description">
+        Description: {{ product.description }}
+    </p>
+
+    <button (click)="select(product)">
+        vergleichen
+    </button>
+
+</div>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { products } from '../products';
+import { AuswahlService } from '../auswahl.service';
 
 @Component({
   selector: 'app-auswahl',
@@ -7,7 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AuswahlComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private auswahlService: AuswahlService,
+  ) { }
+
+  product;
+  products = products;
+  selectedItems = [];
+
+  select(product) {
+    window.alert('Das Produkt wurde für den Vergleich ausgewählt');
+    this.auswahlService.addToAuswahl(product);
+  }
 
   ngOnInit() {
   }
