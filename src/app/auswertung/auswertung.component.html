@@ -19,3 +19,39 @@
         </tr>
     </tbody>
 </table>
+
+<div style="overflow: auto;">
+    <div class="mat-elevation-z8">
+        <mat-table [dataSource]="listData">
+
+            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns:displayedColumns;"></mat-row>
+        
+            <ng-container matColumnDef="Name">
+                <mat-header-cell *matHeaderCellDef>Name</mat-header-cell>
+                <mat-cell *matCellDef="let element">{{ element.name }}</mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="Zoll">
+                <mat-header-cell *matHeaderCellDef>Zoll</mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{ element.zoll }}</mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="Prozessor">
+                <mat-header-cell *matHeaderCellDef>Prozessor</mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{ element.prozessor }}</mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="RAM">
+                <mat-header-cell *matHeaderCellDef>RAM</mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{ element.ram }}</mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="Preis">
+                <mat-header-cell *matHeaderCellDef>Preis</mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{ element.preis }}</mat-cell>
+            </ng-container>
+           
+        </mat-table>
+    </div>
+</div>
