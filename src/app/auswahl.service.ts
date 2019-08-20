@@ -8,7 +8,7 @@ export class AuswahlService {
 
   constructor() { }
 
-  addToAuswahl(product) {
+  addToSelection(product) {
     this.items.push(product);
   }
 
@@ -16,7 +16,7 @@ export class AuswahlService {
     return this.items;
   }
 
-  clearAuswahl() {
+  clearSelecction() {
     this.items = [];
     return this.items;
   }

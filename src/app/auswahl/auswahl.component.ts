@@ -15,10 +15,9 @@ export class AuswahlComponent implements OnInit {
 
   product;
   products = products;
-  selectedItems = [];
 
   select(product) {
-    this.auswahlService.addToAuswahl(product);
+    this.auswahlService.addToSelection(product);
   }
 
   ngOnInit() {
