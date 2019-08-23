@@ -1,25 +1,3 @@
-<h3>Ausgewählte Notebooks</h3>
-<table>
-    <thead>
-        <tr>
-            <td>Name</td>
-            <td>Zoll</td>
-            <td>Prozessor</td>
-            <td>Ram</td>
-            <td>Preis</td>
-        </tr>
-    </thead>
-    <tbody>
-        <tr class="auswahl-item" *ngFor="let item of items">
-            <td>{{ item.name }}</td>
-            <td>{{ item.zoll }}</td>
-            <td>{{ item.prozessor}}</td>
-            <td>{{ item.ram}}</td>
-            <td>ab {{ item.preis }}</td>
-        </tr>
-    </tbody>
-</table>
-
 <div style="overflow: auto;">
     <div class="mat-elevation-z8">
         <mat-table [dataSource]="listData">
