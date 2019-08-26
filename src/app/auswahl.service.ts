@@ -1,24 +1,19 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuswahlService {
-  items = [];
+  private items: BehaviorSubject<object[]> = new BehaviorSubject<object[]>([]);
 
-  constructor() { }
-
-  addToSelection(product) {
-    this.items.push(product);
+  addToSelection(product: {}): void {
+    const items = this.items.getValue();
+    items.push(product);
+    this.items.next(items);
   }
 
-  getItems() {
-    return this.items;
+  getItems(): Observable<object[]> {
+    return this.items.asObservable();
   }
-
-  clearSelecction() {
-    this.items = [];
-    return this.items;
-  }
-
 }
